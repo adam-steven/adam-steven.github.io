@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<htlm>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		<script src="https://kit.fontawesome.com/5aacfd24f8.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body onclick='startSpawn()' onscroll='startSpawn()' onkeydown='startSpawn()'>
+		<div class='container-fluid' id='mainSite'>
+			<div class='row' id='gameHeader' style="display:none;">
+				<div class='col-2 paddingCols'> </div>
+				<div class='col'>
+					<div class='row'>
+						<div class='col-9'> 
+							GREETINGS : <span id='scoreCounter'></span><span id='scoreMultiplier'></span>
+						</div>
+						<div class='col-1'>
+							<i class="fas fa-star" onclick="toggleRareDisplay()" title='Rare Text Archive'></i>
+						</div>
+						<div class='col-1'>
+							<i class="fas fa-angle-double-down" id="scrollIcon" onclick="toggleAutoScroll()" title='Auto Scroll'></i>
+						</div>	
+						<div class='col-1'>
+							<i class="fas fa-redo-alt" onclick="resetGame()" title='Restart'></i>
+						</div>	
+					</div>
+				</div>
+				<div class='col-2 paddingCols'> </div>
+			</div> 
+			
+			<div class='row' id='rareDisplayRow' style="display:none;">
+				<div class='col-2 paddingCols'> </div>
+				<div class='col' id='rareDisplayCol'>
+					<br><br><br>
+					<p class='rareDisplayHeadInfo'>Find the RARE GREETINGS in the pile.<span id="1"  onclick='rareTextFound(1, "secret")'>CLICK THEM!!!<span></p> 
+				
+					<div class='neededThresholdNote'>THESE WILL APPEAR AFTER 0 GREETINGS</div>
+					<div class='rareNote disabled' id='secret'>click_them!!!&nbsp;<span id='secretCounter'>0<span></div>
+				</div>
+				<div class='col-2 paddingCols'> </div>
+			</div> 
+		
+			<div class='row'>
+				<div class='col-2 paddingCols'> </div>
+				<div class='col' id='mainTextCol' onscroll="spawnText()">
+					<div id="clickMeToStart">CLICK ME</div>
+					<div id="cookieNote">This site uses cookies to save your progress.<br>By continuing you're agreeing to the storage of these cookies.</div>
+				</div>
+				<div class='col-2 paddingCols'> </div>
+			</div> 
+		</div>	
+		<footer id="footer" style="display:none;">
+			<div class='container-fluid'>
+				<div class='row'>
+					<div class='col'>
+						<p>congratulations, you wasted your time to see this terrible message</p>
+						<p><a href='https://www.bluecross.org.uk/'>Donate</a></p>
+					</div>
+				</div> 
+			</div>
+		</footer>
+		
+		<audio id="startingTextThud" src="Bounce.mp3" preload="auto"></audio>
+		<audio id="pickup" src="pickup.wav" preload="auto"></audio>
+		<audio id="end" src="end.wav" preload="auto"></audio>
+	</body>
+	<script type="text/javascript" src="scripts.js"></script>
+	<script type="text/javascript">noteRareTexts();</script>
+</html>
