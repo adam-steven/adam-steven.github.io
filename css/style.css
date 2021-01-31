@@ -780,6 +780,17 @@
 	.card-block{
 		padding:10px;
 		margin-left:10px;
+		text-align:left;
+		max-width:1000px;
 	}
 	
+	.card-text{
+		font-size: 0.7em;
+	}
+	
+	.card-text b{
+		color:black;
+	}
+	
+
 		
