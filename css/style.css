@@ -794,8 +794,9 @@
 	}
 	
 	img{
-		max-height: 300px;
-		max-width: 300px;
+		max-width: 100%;
+		max-height: auto;
+
 	}
 	
 	.card-block{
