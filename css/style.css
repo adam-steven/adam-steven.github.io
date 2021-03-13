@@ -1015,6 +1015,12 @@
 			animation: fadeInAbout 0.5s, slideInAbout 0.5s;
 		}
 		
+			@media (max-width: 1500px) {
+				.about-img{
+					width:50%;
+				}
+			}
+		
 			@media (max-width: 1200px) {
 				.about-img{
 					width:60%;
