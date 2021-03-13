@@ -6,6 +6,11 @@
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
 		
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		
 	
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery.scrolly.min.js"></script>
@@ -13,6 +18,7 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
+		<script src="js/card-manager.js"></script>
 
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
@@ -27,17 +33,24 @@
 				<!-- Logo -->
 				<div id="logo">
 					<h1 id="title">Adam Steven</h1>
-					<p>Software Engineer</p>
+					<p>Software & Website Developer</p>
 				</div>
 
 				<!-- Nav -->
 				<nav id="nav">
 					<ul>
-						<li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Portfolio</span></a></li>
+						<li><a href="#me" id="me-link" class="skel-layers-ignoreHref">About Me<hr></a></li>
+						
+						<li><a href="#charity" id="charity-link" class="skel-layers-ignoreHref me-nav-line"><span class="icon fa-heart">Charity Work</span></a></li>
+						<li><a href="#social" id="social-link" class="skel-layers-ignoreHref me-nav-line"><span class="icon fa-users">Social Activity</span></a></li>
+						<li><a href="#hobbies" id="hobbies-link" class="skel-layers-ignoreHref me-nav-line"><span class="icon fa-home">Hobbies</span></a></li>
+					
 						<!-- projects-->
-						<li><a href="#education" id="education-link" class="skel-layers-ignoreHref"><span class="icon fa-graduation-cap">Education</span></a></li>
-						<li><a href="#work" id="work-link" class="skel-layers-ignoreHref"><span class="icon fa-briefcase">Client Work</span></a></li>
-						<li><a href="#personal" id="personal-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Personal Projects</span></a></li>
+						<li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref">Portfolio<hr></span></a></li>
+						
+						<li><a href="#personal" id="personal-link" class="skel-layers-ignoreHref port-nav-line"><span class="icon fa-cogs">Personal Projects</span></a></li>
+						<li><a href="#work" id="work-link" class="skel-layers-ignoreHref port-nav-line"><span class="icon fa-briefcase">Client Work</span></a></li>
+						<li><a href="#education" id="education-link" class="skel-layers-ignoreHref port-nav-line"><span class="icon fa-graduation-cap">Education</span></a></li>
 					</ul>
 				</nav>
 					
@@ -45,395 +58,243 @@
 		</div>
 
 		<!-- Main -->
-		<div id="main">				
+		<div id="main">	
+			<!-- About me -->
+			<section id="me" class="me">
+				<div class="container-fluid">
+					<div class="about-description">
+						<h2>About Me</h2>
+						
+						<h5 class="titleSecText">
+							<p>Welcome to the portfolio of software & website developer, Adam Steven.</p>
+							
+							<p>I am a highly focused 4th year computing student, soon to be graduating from Abertay University with a predicted degree 1st. 
+							Seeking to improve the groundwork I have built up during my time at University. As well as, developing experience in a professional work environment.</p>
+							
+							<p>Research orientated, I value both maturing my independent and team-based skills through tackling and overcoming tasks set before me. 
+							Learning from those around me and adapting to new circumstances that arise.</p>
+							
+							<p>The about me section below highlights aspects of my past and present to provide a better idea of me as a person.</p>
+						</h5>
+						
+						<img class="img-responsive about-img" src="images/me-block.png">
+					</div>
+
+					<div class="row">
+						<div class="col">
+							<div class="cardSec charityCardSec">
+								<section id="charity" class="charity">
+									<div id="catHead"><h3>Charity Work</h3></div>
+									
+									<div class="row">
+										<div class="col-6">
+											<div class="card">
+												<div class="img-container">
+													<img class="card-img-top img-responsive" src="images/oxfam.jpg">
+												</div>
+												<div class="card-body">
+													<b>Oxfam Volunteer</b>
+													<p class="charityCardText">I was a Volunteer at Oxfam’s clothes retail store, Troon. 
+													Preparing donated clothes and items at the back of the shop, 
+													along with shelf stocking and helping with some heavy lifting work. </p>
+												</div>
+											</div>
+										</div>
+										<div class="col-6">
+											<div class="card">
+												<div class="img-container" style="background-color:black;">
+													<img class="card-img-top img-responsive" src="images/movember.png">
+												</div>
+												<div class="card-body">
+													<b>Movember Fundraising</b>
+													<p class="charityCardText">I am an active participant in Movember’s annual fundraising event.
+													Starting at 16: raising money, spreading awareness, and donating to others.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+							</div>
+							<div class="cardSec socialCardSec">
+								<section id="social" class="social">
+									<div id="catHead"><h3>Social Activity</h3></div>
+									
+									<div id="socialCarousel" class="carousel slide" data-ride="carousel">
+										<!-- Indicators -->
+										<ul class="carousel-indicators">
+										<li data-target="#socialCarousel" data-slide-to="0" class="active"></li>
+										<li data-target="#socialCarousel" data-slide-to="1"></li>
+										<li data-target="#socialCarousel" data-slide-to="2"></li>
+										</ul>
+
+										<!-- The slideshow -->
+										<div class="carousel-inner social-carousel-inner">
+											<div class="carousel-item active">
+												<div class="carousel-item-container">
+													<img class="img-responsive social-carousel-image" src="images/poketay.png" alt="Poketay">
+													<img class="img-responsive hearAward" src="images/hearAward.png" alt="HEAR Award">
+													<div class="carousel-caption">
+														<h3 class="socialCaroTitle">Abertay Poketay Secretary</h3>
+														<p class="socialCaroText">During my 2nd year of university, I became secretary of
+														Abertay’s social Pokémon society “Poketay”. With a full shift in leadership, 
+														we were able to take a dying society of 6 active members. Shifting the focus
+														from internal group activities to networking with other societies. 
+														Bringing in over 20 new active members at the end of the first year and 
+														winning the most improved society award.</p>
+														<br/>
+													</div>
+												</div>
+											</div>
+											
+											<div class="carousel-item">
+												<div class="carousel-item-container">
+													<img class="img-responsive social-carousel-image" src="images/SAL.png" alt="SAL Drama">
+													<div class="carousel-caption">
+														<h3 class="socialCaroTitle">Abertay SAL Drama</h3>
+														<p class="socialCaroText">I currently am a passionate member in Abertay’s drama society.
+														Acting in community created stage shows and helping construct props. Volunteering to be 
+														the head costume/prop designer for SAL’s rendition of the Greek play Medea.</p>
+														<br/>
+													</div>
+												</div>
+											</div>
+											
+											<div class="carousel-item">
+												<div class="carousel-item-container">
+													<img class="img-responsive social-carousel-image" src="images/bbs.png" alt="Boys Brigade">
+													<div class="carousel-caption">
+														<h3 class="socialCaroTitle">Boys Brigade</h3>
+														<p class="socialCaroText">I was part of the Troon Boys Brigade sector. Participating in
+														the extra events, fundraisers, and volunteer work a long with the weekly meetings.</p>
+														<br/>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>					
+								</section>	
+							</div>
+							<div class="cardSec hobbiesCardSec">
+								<section id="hobbies" class="hobbies">
+									<div id="catHead"><h3>Hobbies</h3></div>
+									
+									<div class="card hobbies-card">
+										<div class="card-body">
+											<div class="row">
+												<div class="col-3">
+													<img class="hobbies-card-img" src="images/3dMod.png">
+												</div>
+												<div class="col-9 hobbies-card-text">
+													<h4>3D Modelling</h4>
+													<p class="hobbiesCardText">Starting with a self-motivated exploration into game creation.
+													I am invested in the creation of both 3D and 2D art, developing
+													hobbyist level skills in both Blender and Autodesk Fusion 360. Along
+													with this, my recent ventures into 3D printing have allowed me to
+													improve my skills with physical prototyping.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<div class="card hobbies-card">
+										<div class="card-body">
+											<div class="row">
+												<div class="col-3">
+													<img class="hobbies-card-img" src="images/watch.jpg">
+												</div>
+												<div class="col-9 hobbies-card-text">
+													<h4>Horology</h4>
+													<p class="hobbiesCardText">A collector’s hobby, my research into the world of watch making has introduced me
+													to unique and fascinating works of mechanical engineering. Driving me to tinker and
+													modify some of the pieces I collect. Seen in the photo on the right, modifications were 
+													made to the watch: giving the originally sand blasted casing a subtle polish; replacing
+													the glass with sapphire; and adjusting the balance wheel to be 1.6s more accurate.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<div class="card hobbies-card">
+										<div class="card-body">
+											<div class="row">
+												<div class="col-3">
+													<img class="hobbies-card-img" src="images/weights.jpg">
+												</div>
+												<div class="col-9 hobbies-card-text">
+													<h4>Weight Lifting</h4>
+													<p class="hobbiesCardText">It is important to stay healthy, and weightlifting is my preferred method to keep active. 
+													However, as this is a heavily researched field challenging my knowledge and preconceived notion
+													on this subject with new information is how I stay motivated in this activity. </p>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+								</section>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		
 			<!-- Portfolio -->
 			<section id="portfolio" class="portfolio">
 				<div class="container-fluid">
 					<h2>Portfolio</h2>
 					
-					<h5>
-						<p>Welcome to the portfolio of software/ website developer, Adam Steven.</p>
-						
-						<p>This site contains a catalogue of notable projects I have worked on from 2017 – 2021,
+					<h5 class="titleSecText">
+						<p>This section contains a catalogue of notable projects I have worked on from 2017 – 2021,
 						including descriptions and links were possible. (Please note with any skill, I am constantly
 						improving. Thus, some of the project’s formatting and techniques do not represent my current
 						development standards).</p>
 						
-						<p>This portfolio does not contain any personal details of me, or any clients I have worked with.</p>
+						<p>The portfolio does not contain any personal details of any clients I have worked with.</p>
+						
+						<div class="row" style="text-align:center;">
+							<div class="col">
+								<input type="radio" id="web" name="portOrder" value="web" onclick="changeCardOrder('web')">
+								<label for="web">Show Websites First</label>
+							</div>
+							<div class="col">
+								<input type="radio" id="app" name="portOrder" value="app" onclick="changeCardOrder('app')">
+								<label for="app">Show Applications First</label>
+							</div>
+							<div class="col">
+								<input type="radio" id="game" name="portOrder" value="game" onclick="changeCardOrder('game')">
+								<label for="game">Show Games First</label>
+							</div>
+						</div>
+						<br>
 					</h5>
 			
 					<div class="row">
-						<div class="col" style="width:100%;">
-						
-							<section id="education" class="education">
-								<div id="catHead"><h3>Education</h3></div>
+						<div class="col">
 							
-								<div class="card flex-row flex-wrap" style="display:none;">
-									<div class="row">
-										<div class="col-3">
-											<div class="card-header border-0">
-												<img src="images/trackingCameraCloseUp.gif" alt="" />
-											</div>
-										</div>
-										<div class="col-9" >
-											<div class="card-block px-2">
-												<h4 class="card-title">Motion Tracking Camera With AWS <a href="https://github.com/adam-steven/Motion-Tracking-Camera" class="btn">Github Link</a></h4>
-												<p class="card-text"><b>Overview:</b> This project consisted of two parts. An OpenCV (Python) 
-												based motion tracker that called a LKM to centre the larges moving object in the camera’s 
-												frame. And an AWS EC2 instance that retrieved and stored the cameras videos. As well as, 
-												hosting a secure website for the user to download these videos. <br>
-												The design revolved around creating a program that could efficiently run on a Raspberry Pi Zero,
-												utilising a stepper motor and USB webcam
-												</p>
-												
-												<p class="card-text"><b>Team:</b> Solo project.</p>
-												
-												<p class="card-text"><b>My Contribution:</b> Developed the LKM, efficient motion tracker, camera mount, 
-												EC2 configuration, and website.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								<div class="card flex-row flex-wrap" style="display:none;">
-									<div class="row">
-										<div class="col-3">
-											<div class="card-header border-0">
-												<img src="images/emotionDetection.png" alt="" />
-											</div>
-										</div>
-										<div class="col-9" >
-											<div class="card-block px-2">
-												<h4 class="card-title">AI Emotion Detection <a href="https://github.com/adam-steven/AI-Emotion-Detection" class="btn">Github Link</a></h4>
-												<p class="card-text"><b>Overview:</b> This project involved the research of different pre-existing emotion
-												detection algorithms and dataset gathering/cleaning techniques. To then implement the best-found methods
-												of both areas to achieve an acceptable prediction accuracy (an accuracy achieved of 77% with a C# program). 
-												</p>
-												
-												<p class="card-text"><b>Team:</b> Solo project.</p>
-												
-												<p class="card-text"><b>My Contribution:</b> Emotion detection research, implementation, and improvements. 
-												As well as moderating the AI dataset, and creating the GUI.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								<div class="card flex-row flex-wrap" style="display:none;">
-									<div class="row">
-										<div class="col-3">
-											<div class="card-header border-0">
-												<img src="images/printFailureDetection.png" alt="" />
-											</div>
-										</div>	
-										<div class="col-9" >
-											<div class="card-block px-2">
-												<h4 class="card-title">3D Print Failure Detection <a href="#" class="btn disabled">No Link Avaliable Yet</a></h4>
-												<p class="card-text"><b>Overview:</b> An honours project, it involved the research of pre-existing object detection,
-												failure detection and user alert methods. To then implement the best-found methods of these areas onto a Raspberry Pi 3
-												and examined in real world situations. (This project is still ongoing).
-												</p>
-												
-												<p class="card-text"><b>Team:</b> Solo project.</p>
-												
-												<p class="card-text"><b>My Contribution:</b> Researched and improved pre-existing object detection. Developed the failure
-												detection, GUI, and user alert system.</p>
-											</div>
-										</div>
-									</div>	
-								</div>
-								
-								<div class="card flex-row flex-wrap" style="display:none;">
-									<div class="row">
-										<div class="col-3">
-											<div class="card-header border-0">
-												<img src="images/aiGame.gif" alt="" />
-											</div>
-										</div>
-										<div class="col-9" >
-											<div class="card-block px-2">
-												<h4 class="card-title">Game AI Comparison <a href="https://github.com/adam-steven/Game-AI-Comparison" class="btn">Github Link</a></h4>
-												<p class="card-text"><b>Overview:</b> As finite state machines are known for becoming hard to handle the more states are added.
-												This project planned to test how a large finite state machine compared to a large weighted finite state machine, as the weighted
-												version is far easier to implement. A Hot Line Miami style game was created in Unity (C#), and the two AI methods were implemented
-												into the enemy AI. It was found that the users could not tell the differences between the enemies, however the weighted version
-												was calculated as being easier.   
-												</p>
-												
-												<p class="card-text"><b>Team:</b> Solo project that included volunteer testers.</p>
-												
-												<p class="card-text"><b>My Contribution:</b> Created the game (including all assets), level generation, finite state machine,
-												and weighted finite state machine.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								<div class="card flex-row flex-wrap" style="display:none;">
-									<div class="row">
-										<div class="col-3">
-											<div class="card-header border-0">
-												<img src="images/mobileGame.png" alt="" />
-											</div>
-										</div>
-										<div class="col-9" >
-											<div class="card-block px-2">
-												<h4 class="card-title">Mobile Game With Google Firebase <a href="https://github.com/adam-steven/Mobile-Game" class="btn">Github Link</a></h4>
-												<p class="card-text"><b>Overview:</b> This project goal was to create a fun, simple Android mobile game, in Java, that saved high scores
-												on to a Google Firebase Database in a similar vain to arcade score boards. The game used phone’s accelerometers and magnet field sensors
-												to control the characters, saved personal high scores on to the phone, and notified the user to come back if they had not played in a few
-												days.
-												</p>
-												
-												<p class="card-text"><b>Team:</b> Solo project.</p>
-												
-												<p class="card-text"><b>My Contribution:</b> Configured the Firebase Database, implemented the game (including all assets),
-												and setup android user notifications. </p>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								<div class="card flex-row flex-wrap" style="display:none;">
-									<div class="row">
-										<div class="col-3">
-											<div class="card-header border-0">
-												<img src="images/MVCWebsite.png" alt="" />
-											</div>
-										</div>
-										<div class="col-9" >
-											<div class="card-block px-2">
-												<h4 class="card-title">MVC MySQL Website <a href="https://github.com/adam-steven/MVC-Website" class="btn">Github Link</a></h4>
-												<p class="card-text"><b>Overview:</b> The project revolved around the creation of an easily scalable website (with any changes to the MySQL
-												database being accurately reflected on the site), including dynamic functionality in a resizable form factor. A Model, View, Controller
-												approach was taken to achieve these requirements and create an overall more secure website. (visual enhancements via CSS was not required)
-												</p>
-												
-												<p class="card-text"><b>Team:</b> Solo project.</p>
-												
-												<p class="card-text"><b>My Contribution:</b> Developed the website via HTML, php, MySQL, and JavaScript.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								<div class="card flex-row flex-wrap" style="display:none;">
-									<div class="row">
-										<div class="col-3">
-											<div class="card-header border-0">
-												<img src="images/secureMessageing.png" alt="" />
-											</div>
-										</div>
-										<div class="col-9" >
-											<div class="card-block px-2">
-												<h4 class="card-title">Secure Messaging System <a href="https://github.com/adam-steven/Secure-Messaging-System" class="btn">Github Link</a></h4>
-												<p class="card-text"><b>Overview:</b> Like Facebook Messenger, end to end and data at rest encryption was the goal of this C# based project.
-												Having X number of client applications sending data to a server application and the server transferring the data to its correct destination.
-												Both the user accounts and messages were encrypted on a MySQL database so that the clients could log in and see previous messages. 
-												</p>
-												
-												<p class="card-text"><b>Team:</b> Solo project.</p>
-												
-												<p class="card-text"><b>My Contribution:</b> Developed the GUI, MySQL database, and security measures. As well as implementing client,
-												server communication with SimpleTCP.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								<div class="card flex-row flex-wrap" style="display:none;">
-									<div class="row">
-										<div class="col-3">
-											<div class="card-header border-0">
-												<img src="images/infiniteRunner.png" alt="" />
-											</div>
-										</div>
-										<div class="col-9" >
-											<div class="card-block px-2">
-												<h4 class="card-title">Endless Runner Game <a href="https://github.com/adam-steven/Endless-Runner-Game" class="btn">Github Link</a></h4>
-												<p class="card-text"><b>Overview:</b> The oldest project in this portfolio, the objective of this was to create a game. Using Unity and C#,
-												a score-based 3D endless runner was created with auto-generated obstacle layouts. 
-												</p>
-												
-												<p class="card-text"><b>Team:</b> Solo project.</p>
-												
-												<p class="card-text"><b>My Contribution:</b> Developed the game (including all assets) and level generation.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								<div class="card flex-row flex-wrap" style="display:none;">
-									<div class="row">
-										<div class="col-3">
-											<div class="card-header border-0">
-												<img src="images/mandelbrot.png" alt="" />
-											</div>
-										</div>
-										<div class="col-9" >
-											<div class="card-block px-2">
-												<h4 class="card-title">Mandelbrot Visualiser <a href="https://github.com/adam-steven/Mandelbrot-Visualiser" class="btn">Github Link</a></h4>
-												<p class="card-text"><b>Overview:</b> Given a Mandelbrot generator algorithm in C++ this project involved optimising the generator
-												using CPU multi-threading. Allowing a user to navigate the Mandelbrot diagram through a UI & GUI interface.
-												</p>
-												
-												<p class="card-text"><b>Team:</b> Solo project.</p>
-												
-												<p class="card-text"><b>My Contribution:</b> Optimised the Mandelbrot generator and created an OpenGL GUI. </p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</section>
-
-							<section id="work" class="work">
-								<div id="catHead"><h3>Previous Work</h3></div>
+							<div class="cardSec">
+								<section id="personal" class="personal">
+									<div id="catHead"><h3>Personal Projects</h3></div>
+								</section>	
+							</div>
 							
-								<div class="card flex-row flex-wrap" style="display:none;">
-									<div class="row">
-										<div class="col-3">
-											<div class="card-header border-0">
-												<img src="images/ghj.png" alt="" />
-											</div>
-										</div>
-										<div class="col-9" >
-											<div class="card-block px-2">
-												<h4 class="card-title">Perfume Shop Website <a href="#" class="btn disabled">No Link Avaliable</a></h4>
-												<p class="card-text"><b>Overview:</b> This was the creation of a publishable online retail store aimed at selling perfume to middle aged women
-												in Malaysia. The site has separate customer and admin interfaces, a dynamic product filtering system, product search functionality, and
-												processes payments via the Stripe API. Unfortunately, do to COVID-19 the client has decided to postpone online expansion for the foreseeable future. 
-												</p>
-												
-												<p class="card-text"><b>Team:</b> 2 members – 1 developer and 1 client/designer.</p>
-												
-												<p class="card-text"><b>My Contribution:</b> Developed the website via HTML, php, CSS, MySQL, and JavaScript. As well as, implementing the Stripe
-												transaction API and configuring the web host.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								<div class="card flex-row flex-wrap" style="display:none;">
-									<div class="row">
-										<div class="col-3">
-											<div class="card-header border-0">
-												<img src="images/ninewells.png" alt="" />
-											</div>
-										</div>
-										<div class="col-9" >
-											<div class="card-block px-2">
-												<h4 class="card-title">Legacy System Adapter <a href="#" class="btn disabled">No Link Avaliable</a></h4>
-												<p class="card-text"><b>Overview:</b> Pecos is an inventory purchasing system used by this client company. Unfortunately, Pecos does not have an 
-												inventory organisation tool leading to item duplicates being accidentally purchased. This project involved the development of a C# system that
-												could take the data from Pecos and adapt/ modify it to then be stored in an inventory organisation tool.
-												</p>
-												
-												<p class="card-text"><b>Team:</b> 5 members – 4 developers and 1 systems expert.</p>
-												
-												<p class="card-text"><b>My Contribution:</b> Moderated all online communication between the members and created the XML output.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</section>	
-
-							<section id="personal" class="personal">
-								<div id="catHead"><h3>Personal Projects</h3></div>
+							<div class="cardSec">
+								<section id="work" class="work">
+									<div id="catHead"><h3>Previous Work</h3></div>
+								</section>	
+							</div>
 							
-								<div class="card flex-row flex-wrap" style="display:none;">
-									<div class="row">
-										<div class="col-3">
-											<div class="card-header border-0">
-												<img src="images/ggj2018.png" alt="" />
-											</div>
-										</div>
-										<div class="col-9" >
-											<div class="card-block px-2">
-												<h4 class="card-title">GGJ 2018 <a href="https://globalgamejam.org/2018/games/pierat-radio" class="btn">GGJ Link</a></h4>
-												<p class="card-text"><b>Overview:</b> This project took place during the 2018 Global Game Jam, where in 48 hours, with a team of strangers, a
-												game was created. This was a boat themed “survive for as long as possible” game created in Unity, C#.
-												</p>
-												
-												<p class="card-text"><b>Team:</b> 4 members – 2 developers and 2 artists.</p>
-												
-												<p class="card-text"><b>My Contribution:</b> Added the character controller, GUI elements, item spawning, and item interaction.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								<div class="card flex-row flex-wrap" style="display:none;">
-									<div class="row">
-										<div class="col-3">
-											<div class="card-header border-0">
-												<img src="images/ggj2019.png" alt="" />
-											</div>
-										</div>
-										<div class="col-9" >
-											<div class="card-block px-2">
-												<h4 class="card-title">GGJ 2019 <a href="https://github.com/giodestone/Acorn-Fling-VR" class="btn">Github Link</a></h4>
-												<p class="card-text"><b>Overview:</b> This project took place during the 2019 Global Game Jam, where in 48 hours a game was created. Given the opportunity to
-												develop for the Acer Mixed Reality VR headset, a VR puzzle game was created where the player must navigate between different planets to find home.  
-												</p>
-												
-												<p class="card-text"><b>Team:</b> 2 members – 1 developer and 1 artist.</p>
-												
-												<p class="card-text"><b>My Contribution:</b> Created the 3D models, textures, animations, sky box, and world generation. </p>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								<div class="card flex-row flex-wrap" style="display:none;">
-									<div class="row">
-										<div class="col-3">
-											<div class="card-header border-0">
-												<img src="images/webGame.png" alt="" />
-											</div>
-										</div>
-										<div class="col-9" >
-											<div class="card-block px-2">
-												<h4 class="card-title">Website Game <a href="webgame/index.html" class="btn">Try It Here</a></h4>
-												<p class="card-text"><b>Overview:</b> This project was originally planned to be a JavaScript heavy website where the user could interact with and effect 
-												the layout of a pointless website. Through the development process however, “find the secrets” game elements were added.
-												</p>
-												
-												<p class="card-text"><b>Team:</b> 3 members – 1 developer, 1 site manager, and 1 idea/asset creator.</p>
-												
-												<p class="card-text"><b>My Contribution:</b> Developed the website via HTML, CSS, and JavaScript.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								<div class="card flex-row flex-wrap" style="display:none;">
-									<div class="row">
-										<div class="col-3">
-											<div class="card-header border-0">
-												<img src="images/audioRemoverBash.png" alt="" />
-											</div>
-										</div>
-										<div class="col-9" >
-											<div class="card-block px-2">
-												<h4 class="card-title">Bash Audio Scrubber <a href="https://github.com/adam-steven/Bash-Audio-Scrubber" class="btn">Github Link</a></h4>
-												<p class="card-text"><b>Overview:</b> An exploration into Bash shell automation. This program gathers all MP4 files from a given directory
-												and copies them to a new folder, with no audio – utilising ffmpeg.
-												</p>
-												
-												<p class="card-text"><b>Team:</b> Solo project.</p>
-												
-												<p class="card-text"><b>My Contribution:</b> Path selection, file gathering/ processing, and user safety verification.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</section>							
-						
+							<div class="cardSec">
+								<section id="education" class="education">
+									<div id="catHead"><h3>Education</h3></div>
+								</section>
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
+
 		</div>
-		<script type="text/javascript" >displayTheCards();</script>
+		<div class="phoneScaleWarning"> This Aspect Ratio Is Not Yet Fully Supported </div>
+		<script type="text/javascript" >createCards();</script>
 	</body>
 </html>

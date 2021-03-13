@@ -2,12 +2,6 @@
 @import url("font-awesome.min.css");
 @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600");
 
-/*
-	Prologue by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 /*********************************************************************************/
 /* Basic                                                                         */
 /*********************************************************************************/
@@ -501,6 +495,7 @@
 					font-size: 1em;
 				}
 
+
 /*********************************************************************************/
 /* Icons                                                                         */
 /*********************************************************************************/
@@ -525,6 +520,7 @@
 			display: none;
 		}
 
+
 /*********************************************************************************/
 /* Header                                                                        */
 /*********************************************************************************/
@@ -541,7 +537,6 @@
 		box-shadow: inset -0.25em 0 0.25em 0 rgba(0,0,0,0.1);
 		text-align: right;
 	}
-	
 		#header .top
 		{
 			position: absolute;
@@ -669,10 +664,22 @@
 						{
 						}
 
-							#nav ul li a.active span:before
+							#nav ul li .port-nav-line.active span:before
 							{
-								color: #e27689;
+								 color: #c2e1e1;
 							}
+							
+							#nav ul li .me-nav-line.active span:before
+							{
+								 color: #c2d4e1;
+							}
+
+	
+	hr{
+		margin:0;
+		padding:0;
+	}
+
 
 /*********************************************************************************/
 /* Footer                                                                        */
@@ -710,8 +717,9 @@
 				margin-left: 0;
 			}
 
+
 /*********************************************************************************/
-/* Main                                                                          */
+/* Main Sections                                                                         */
 /*********************************************************************************/
 
 	#main
@@ -766,64 +774,475 @@
 				background-color: #f5fafa;
 				background-image: url('images/overlay.png');
 				box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.05), inset 0 0.1em 0.1em 0 rgba(0,0,0,0.025);
+				box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.05), inset 0 0.1em 0.1em 0 rgba(0,0,0,0.025);
 			}
 			
-			section.education
+			section.personal
 			{
 				background-color: #e4f2f2;
 				background-image: url('images/overlay.png');
-				box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.05), inset 0 0.1em 0.1em 0 rgba(0,0,0,0.025);
+				padding:10px;	
 			}
 			
 			section.work
 			{
 				background-color: #d3e9e9;
 				background-image: url('images/overlay.png');
-				box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.05), inset 0 0.1em 0.1em 0 rgba(0,0,0,0.025);
+				padding:10px;
 			}
 			
-			section.personal
+			section.education
 			{
 				background-color: #c2e1e1;
+				background-image: url('images/overlay.png');
+				padding:10px;
+			}
+			
+			#main > section.me
+			{
+				background-color: #f5f8fa;
 				background-image: url('images/overlay.png');
 				box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.05), inset 0 0.1em 0.1em 0 rgba(0,0,0,0.025);
 			}
 			
-	.card{
-		margin-bottom: 30px;
-	}
-	
-	img{
-		max-width: 100%;
-		max-height: auto;
+			section.charity
+			{
+				background-color: #e4ecf2;
+				background-image: url('images/overlay.png');
+				padding:10px;
+			}
 
+			section.social
+			{
+				background-color: #d3e0e9;
+				background-image: url('images/overlay.png');
+				padding:10px;
+			}
+
+			section.hobbies
+			{
+				background-color: #c2d4e1;
+				background-image: url('images/overlay.png');
+				padding:10px;
+			}
+		
+	.cardSec{
+		position: relative;
+		left: 00%;
+		z-index:1;
+		margin-bottom: 20px;
 	}
+
+
+/*********************************************************************************/
+/* Porfolio Cards                                                                    */
+/*********************************************************************************/
 	
-	.card-block{
-		padding:10px;
-		margin-left:10px;
-		text-align:left;
-		max-width:1000px;
-	}
-	
-	.card-text{
-		font-size: 0.7em;
-	}
-	
-	.card-text b{
-		color:black;
-	}
-	
+	/* Catagorie Head */
 	#catHead{
 		text-align:left;
 	}
 	
-	.btn:hover {
-	  transform: translate3D(0,-1px,0) scale(1.1);
-		-webkit-transform: translate3D(0,-1px,0) scale(1.1); 
-		-ms-transform: translate3D(0,-1px,0) scale(1.1);
-		-moz-transform: translate3D(0,-1px,0) scale(1.1);
-	  transition: all .4s ease; /* zoom in */
-	  z-index:2;
+	/* Porfolio Card */
+	.slide-card{
+		margin-bottom: 20px;
+		background-color: #212528;
+		color: black;
+		overflow:hidden
+	}
+	
+		.slide-card:hover{
+			-webkit-animation: colourFade 0.3s;
+			animation: colourFade 0.3s;
+			background-color: white;
+		}
+	
+		.card-body{
+			padding:10px;
+			text-align:left;
+			width:%100;
+			overflow:hidden;
+		}
+			
+			/* Porfolio Card Image   */
+			.imgCol{
+				position:absolute; 
+				top: 50%;
+				left: 50%;
+				-ms-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+				-webkit-transform: translate(-50%, -50%);
+				-moz-transform: translate(-50%, -50%);
+			}
+			
+				.slide-card:hover .imgCol{
+					position:relative; 
+					top: 0%;
+					left: 1.5%;
+					-ms-transform: translate(0%, 0%);
+					transform: translate(0%, 0%);
+					-webkit-transform: translate(0%, 0%);
+					-moz-transform: translate(0%, 0%);
+					
+					width: 100%;
+				}
+			
+				.slide-card-img{
+					filter: gray; 
+					-webkit-filter: grayscale(100%);
+					opacity: 0.4;
+					
+					width: 150%;
+
+					position:absolute; 
+					top: 50%;
+					left: 50%;
+					-ms-transform: translate(-50%, -50%);
+					transform: translate(-50%, -50%);
+					-webkit-transform: translate(-50%, -50%);
+					-moz-transform: translate(-50%, -50%);
+				}
+				
+					.slide-card:hover .slide-card-img{
+						width: 85%;
+						height: auto;
+						filter: none;
+						-webkit-filter: grayscale(0%);
+						opacity: 1;
+						top: 56%;
+					}
+	
+
+			/* Porfolio Card Text   */
+			.card-header b{
+				color:white;
+				font-size: 2em;
+				font-weight:bold;
+				z-index:2;
+				
+				position: absolute;
+				top: 45%;
+				left: 50%;
+				-ms-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+				-webkit-transform: translate(-50%, -50%);
+				-moz-transform: translate(-50%, -50%);
+			}
+			
+				.slide-card:hover .card-header b{
+					color:black;
+					font-size: 1.1em;
+					font-weight:normal;
+					
+					position: relative;
+					top: 0%;
+					left: 0%;
+					-ms-transform: translate(0%, 0%);
+					transform: translate(0%, 0%);
+					-webkit-transform: translate(0%, 0%);
+					-moz-transform: translate(0%, 0%);
+				}
+				
+				/* Card Title Colours */
+				.slide-card:hover .plt-unity
+				{ background-color:#CDA8F0; }
+				
+				.slide-card:hover .plt-web
+				{ background-color: #A8EFF0; }
+				
+				.slide-card:hover .plt-cs
+				{ background-color:#A8F0CD; }
+				
+				.slide-card:hover .plt-python
+				{ background-color:#A8CBF0; }
+				
+				.slide-card:hover .plt-other
+				{ background-color:#F0A9A8; }
+				/* --------- */
+						
+			.card-text{
+				font-size: 0.7em;
+				opacity: 0;
+			}
+	
+			.card-text b, .btn, .card-title{
+				color:black;
+				opacity: 0;
+			}
+
+				.slide-card:hover .card-text b, .card:hover .btn, .card:hover .card-title, .card:hover .card-text{
+					opacity: 1;
+				}
+
+			/* Card Link */
+			.btn:hover {
+				transform: translate3D(0,-1px,0) scale(1.1);
+				-webkit-transform: translate3D(0,-1px,0) scale(1.1); 
+				-ms-transform: translate3D(0,-1px,0) scale(1.1);
+				-moz-transform: translate3D(0,-1px,0) scale(1.1);
+				transition: all .3s ease; /* zoom in */
+				z-index:2;
+			}
+/*********************************************************************************/
+/* About Me                                                                   */
+/*********************************************************************************/	
+	
+	.about-description{
+		position: relative;
+		z-index:1;
+	}
+	
+		.titleSecText{
+			padding: 0px 50px ;
+		}
+		
+		.about-img{
+			position: absolute;
+			width:40%;
+
+			top: 60%;
+			left: 80%;
+			
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
+			-moz-transform: translate(-50%, -50%);
+			
+			z-index:-1;
+			opacity: 0.2;
+			
+			-webkit-animation: fadeInAbout 0.5s, slideInAbout 0.5s;
+			animation: fadeInAbout 0.5s, slideInAbout 0.5s;
+		}
+		
+			@media (max-width: 1200px) {
+				.about-img{
+					width:60%;
+				}
+			}
+	
+	
+/*********************************************************************************/
+/* About Me Cards                                                                    */
+/*********************************************************************************/
+	
+	/* charity */
+	.charityCardSec .card{
+		opacity: 0;
+	}
+	
+	.charityCardSec .show-me{
+		-webkit-animation: fadeIn 1s, slideIn 0.5s;
+		animation: fadeIn 1s, slideIn 0.5s;
+		opacity: 100;
 	}
 		
+		.charityCardText{
+			font-size: 0.7em;
+		}
+			
+		.img-container{
+			text-align:center;
+		}
+		
+			.card-img-top{
+				max-height:300px;
+				max-width:300px;
+			}
+
+	/* hobbies */
+	.hobbies-card{
+		margin-bottom: 20px;
+	}
+	
+		.hobbies-card-img{
+			width:100%;
+			height:auto;
+		}
+		
+		.hobbiesCardText{
+			font-size: 0.8em;
+		}
+
+	/* social */
+	.socialCardSec .carousel{
+		opacity: 0;
+	}
+	
+	.socialCardSec .show-me{
+		-webkit-animation: fadeIn 1s;
+		animation: fadeIn 1s;
+		opacity: 100;
+	}
+
+		.social-carousel-inner{
+			position: relative;
+			height: auto;
+			margin-bottom:20px;
+			background-color:black;
+		}
+	
+			.social-carousel-image{
+				object-fit: cover;
+				object-position: 50% 50%;
+
+				width: 100%;
+				height: auto;
+			}
+			
+				.social-carousel-inner:hover .social-carousel-image{
+					filter: brightness(10%);
+				}
+	
+				.carousel-item-container{
+					position: relative;
+					z-index:2;
+					text-align: center;
+				}
+
+					.socialCaroTitle{
+						color:white;
+						font-weight:bold;
+						text-shadow: 0px 0px 5px black;
+					}
+					
+						.social-carousel-inner:hover .socialCaroText{
+							display:block;
+							font-size: 0.7em;
+						}
+				
+					.socialCaroText{
+						display:none;
+					}
+	
+
+		.hearAward
+		{
+			position: absolute;
+			z-index:3;
+			width:17%;
+			box-shadow: 0px 0px 20px 5px black;
+			
+			top: 25%;
+			left: 90%;
+			
+			-webkit-animation: shake 1.2s;
+			animation: shake 1.2s;
+			
+			-ms-transform: translate(-50%, -50%) rotate(20deg);
+			transform: translate(-50%, -50%) rotate(20deg);
+			-webkit-transform: translate(-50%, -50%) rotate(20deg);
+			-moz-transform: translate(-50%, -50%) rotate(20deg);
+		}
+		
+			.social-carousel-inner:hover .hearAward{
+				opacity:0;
+			}
+
+	
+/*********************************************************************************/
+/* TEMP - Aspect Ration Warning - TEMP                                                                   */
+/*********************************************************************************/	
+	
+	.phoneScaleWarning{
+		display:none;
+	}
+
+	@media (max-width: 900px) {
+		.phoneScaleWarning{
+			display:inline;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			text-align:center;
+			color:white;
+			background-color:purple;
+			font-size: 1em;
+			font-weight:bold;
+			width:100%;
+			z-index:5;
+		}
+	}
+		
+		
+/*********************************************************************************/
+/* Animations                                                                   */
+/*********************************************************************************/	
+
+	@keyframes colourFade {
+	  from {background-color: #212528;}
+	  to {background-color: white;}
+	}
+		
+	@-webkit-keyframes colourFade {
+		from {background-color: #212528;}
+		to {background-color: white;}
+	}
+	
+	@keyframes fadeIn {
+	  from {opacity: 0;}
+	  to {opacity: 100;}
+	}
+		
+	@-webkit-keyframes fadeIn {
+		from {opacity: 0;}
+		to {opacity: 100;}
+	}
+	
+	@keyframes slideIn {
+		from {bottom:100%;}
+		to {bottom:0%;}
+	}
+		
+	@-webkit-keyframes slideIn {
+		from {bottom:100%;}
+		to {bottom:0%;}
+	}
+	
+	@keyframes shake {
+		0% { transform: translate(-50%, -50%) rotate(20deg); }
+		10% { transform: translate(-50%, -50%) rotate(15deg); }
+		20% { transform: translate(-50%, -50%) rotate(20deg); }
+		30% { transform: translate(-50%, -50%) rotate(15deg); }
+		40% { transform: translate(-50%, -50%) rotate(20deg); }
+		50% { transform: translate(-50%, -50%) rotate(15deg); }
+		60% { transform: translate(-50%, -50%) rotate(20deg); }
+		70% { transform: translate(-50%, -50%) rotate(15deg); }
+		80% { transform: translate(-50%, -50%) rotate(20deg); }
+		90% { transform: translate(-50%, -50%) rotate(15deg); }
+		100% { transform: translate(-50%, -50%) rotate(20deg); }
+	}
+		
+	@-webkit-keyframes shake {
+		0% { -webkit-transform: translate(-50%, -50%) rotate(20deg); }
+		10% { -webkit-transform: translate(-50%, -50%) rotate(15deg); }
+		20% { -webkit-transform: translate(-50%, -50%) rotate(20deg); }
+		30% { -webkit-transform: translate(-50%, -50%) rotate(15deg); }
+		40% { -webkit-transform: translate(-50%, -50%) rotate(20deg); }
+		50% { -webkit-transform: translate(-50%, -50%) rotate(15deg); }
+		60% { -webkit-transform: translate(-50%, -50%) rotate(20deg); }
+		70% { -webkit-transform: translate(-50%, -50%) rotate(15deg); }
+		80% { -webkit-transform: translate(-50%, -50%) rotate(20deg); }
+		90% { -webkit-transform: translate(-50%, -50%) rotate(15deg); }
+		100% { -webkit-transform: translate(-50%, -50%) rotate(20deg); }
+	}
+	
+	@keyframes fadeInAbout {
+		from {opacity: 0;}
+		to {opacity: 0.4;}
+	}
+		
+	@-webkit-keyframes fadeInAbout {
+		from {opacity: 0;}
+		to {opacity: 0.4;}
+	}
+	
+	@keyframes slideInAbout {
+		from {left:140%;}
+		to {left:80%;}
+	}
+		
+	@-webkit-keyframes slideInAbout {
+		from {left:140%;}
+		to {left:80%;}
+	}

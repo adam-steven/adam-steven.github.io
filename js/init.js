@@ -127,19 +127,3 @@
 
 })(jQuery);
 
-//fade in effect on cards : fisrt appearing fastest
-function displayTheCards()
-{
-	var amountOfCards = document.getElementsByClassName("card").length; 
-	
-	var fadeInDelay = 500;
-	for (i = 0; i < amountOfCards; i++) 
-	{
-		$(".card:eq("+i+")").fadeIn(fadeInDelay);
-		fadeInDelay += 100;
-		
-		if(fadeInDelay => 2500){
-			fadeInDelay = 2500;
-		}
-	}
-}
