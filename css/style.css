@@ -1042,6 +1042,10 @@
 		animation: fadeIn 1s, slideIn 0.5s;
 		opacity: 100;
 	}
+	
+		.charityCard{
+			height:100%;
+		}
 		
 		.charityCardText{
 			font-size: 0.7em;
