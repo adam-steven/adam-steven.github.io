@@ -375,3 +375,8 @@ function displayPortOrder(){
 	
 	return "noOrder";
 }
+
+function scrollToSection(thisCard, goToSection) {
+	if(thisCard.style.left != '0%')
+		$('html,body').animate({ scrollTop: $("."+goToSection+"").offset().top}, 'slow');
+}
