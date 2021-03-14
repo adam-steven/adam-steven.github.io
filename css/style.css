@@ -1044,11 +1044,11 @@
 	}
 	
 		.charityCard{
-			height:100%;
+			min-height:100%;
 		}
 		
 		.charityCardText{
-			font-size: 0.7em;
+			font-size: 0.65em;
 		}
 			
 		.img-container{
