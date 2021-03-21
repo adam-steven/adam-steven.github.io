@@ -5,7 +5,7 @@ const cardDataObjs = [{categorie:"Education" ,platform:"Python, OpenCV and Tkint
 					
 					{categorie:"Education" ,platform:"C, Python, OpenCV and AWS" ,pic:"trackingCameraCloseUp.gif" ,title:"Motion Tracking Camera"
 					,hlink:"https://github.com/adam-steven/Motion-Tracking-Camera" ,linkText:"Github Link", linkIcon:"fa-github" 
-					,Overview:"This project consisted of two parts. An OpenCV (Python) based motion tracker that called a LKM to centre the larges moving object in the camera’s frame. And an AWS EC2 instance that retrieved and stored the cameras videos. As well as, hosting a secure website for the user to download these videos. <br/>The design revolved around creating a program that could efficiently run on a Raspberry Pi Zero, utilising a stepper motor and USB webcam" 
+					,Overview:"This project consisted of two parts. An OpenCV (Python) based motion tracker that called a LKM to centre the larges moving object in the camera’s frame. And an AWS EC2 instance that retrieved and stored the cameras videos. As well as, hosting a secure website for the user to download these videos. <br/>The design revolved around creating a program that could efficiently run on a Raspberry Pi Zero, utilising a stepper motor and USB webcam." 
 					,Team:"Solo project." ,Contribution:"Developed the LKM, efficient motion tracker, camera mount, EC2 configuration, and website."},
 					
 					{categorie:"Education" ,platform:"C# .NET Core" ,pic:"emotionDetection.png" ,title:"AI Emotion Detection" 
@@ -25,7 +25,7 @@ const cardDataObjs = [{categorie:"Education" ,platform:"Python, OpenCV and Tkint
 					
 					{categorie:"Education" ,platform:"Website Development" ,pic:"MVCWebsite.png" ,title:"MVC MySQL Website" 
 					,hlink:"https://github.com/adam-steven/MVC-Website" ,linkText:"Github Link", linkIcon:"fa-github" 
-					,Overview:"The project revolved around the creation of an easily scalable website (with any changes to the MySQL database being accurately reflected on the site), including dynamic functionality in a resizable form factor. A Model, View, Controller approach was taken to achieve these requirements and create an overall more secure website. (visual enhancements via CSS was not required)" 
+					,Overview:"The project revolved around the creation of an easily scalable website (with any changes to the MySQL database being accurately reflected on the site), including dynamic functionality in a resizable form factor. A Model, View, Controller approach was taken to achieve these requirements and create an overall more secure website. (visual enhancements via CSS was not required)." 
 					,Team:"Solo project." ,Contribution:"Developed the website via HTML, php, MySQL, and JavaScript."},
 					
 					{categorie:"Education" ,platform:"C# .NET Framework" ,pic:"secureMessageing.png" ,title:"Secure Messaging System" 
