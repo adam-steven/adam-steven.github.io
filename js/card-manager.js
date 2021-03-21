@@ -180,7 +180,7 @@ function orderedcreateCard(cardsPortOrder)
 	}
 }
 
-// <div class="card slide-card">
+// <div class="card slide-card" id="TITLE">
 	// <div class="card-header PLATFORM-COLOUR">
 		// <b>PLATFORM</b>
 	// </div>
@@ -200,7 +200,8 @@ function orderedcreateCard(cardsPortOrder)
 // </div>
 function constructCurrentCard(cardData)
 {
-	var card = "<div class='card slide-card'>";
+	const cardId = cardData.title.split(" ").join("");
+	var card = "<div class='card slide-card' id='"+cardId+"' onclick='centerScrollToCard(\""+cardId+"\")'>";
 	
 	plt = colourTheProjectCard(cardData.platform);
 	card += "<div class='card-header "+plt+"'><b>"+cardData.platform+"</b></div>";
@@ -348,7 +349,16 @@ function changeCardOrder(toPlaceFirst){
 	orderedcreateCard(toPlaceFirst);
 }
 
-function scrollToSection(thisCard, goToSection) {
-	if(thisCard.style.left != '0%')
-		$('html,body').animate({ scrollTop: $("."+goToSection+"").offset().top}, 'slow');
+function scrollToSection(thisCard) {
+	if(thisCard.style.left == '90%')
+		$('html,body').animate({ scrollTop: $(thisCard).offset().top}, 'slow');
+}
+
+function centerScrollToCard(cardID)
+{
+	const element = document.getElementById(cardID);
+	const elementRect = element.getBoundingClientRect();
+	const absoluteElementTop = elementRect.top + window.pageYOffset;
+	const middle = absoluteElementTop - (window.innerHeight / 4);
+	window.scrollTo({top: middle, behavior: 'smooth'});
 }
