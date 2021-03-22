@@ -214,7 +214,7 @@ function constructCurrentCard(cardData)
 	card += "<div class='col-9'><h4 class='card-title'>"+cardData.title+"&nbsp;";
 	
 	if (cardData.hlink != "" && cardData.hlink != "#")
-		card += "<a href='"+cardData.hlink+"' class='btn btn-enabled' target='_blank'><i class='icon "+cardData.linkIcon+"'></i>"+cardData.linkText+"</a></h4>";
+		card += "<a href='"+cardData.hlink+"' class='btn btn-enabled' target='_blank'><i class='icon "+cardData.linkIcon+"'></i>"+ cardData.linkText+"</a></h4>";
 	else
 		card += "<a href='"+cardData.hlink+"' class='btn disabled'>"+cardData.linkText+"</a></h4>";
 		
