@@ -268,7 +268,7 @@ function checkElementRunThough(className){
 		var currentView = document.getElementsByClassName(className)[i];
 
 		var rect = currentView.getBoundingClientRect();
-		var above = rect.bottom - dist < 0;
+		var above = rect.bottom < 0; //rect.bottom - dist < 0; to only display the center card
 		var below = rect.top - viewHeight + dist >= 0;
 		
 		if(!above && !below)
@@ -285,8 +285,8 @@ function checkElementRunThough(className){
 		}
 		else
 		{
-			if (currentView.style.left < "85%")	
-				moveElem(className, i, 90);
+			if (currentView.style.left < "75%")	
+				moveElem(className, i, 80);
 				
 			if (currentView.classList.contains("charityCardSec") && currentView.getElementsByClassName("card")[0].classList.contains("show-me"))
 				editCharityCardSec(currentView, false);
@@ -350,7 +350,7 @@ function changeCardOrder(toPlaceFirst){
 }
 
 function scrollToSection(thisCard) {
-	if(thisCard.style.left == '90%')
+	if(thisCard.style.left == '80%')
 		$('html,body').animate({ scrollTop: $(thisCard).offset().top}, 'slow');
 }
 
